@@ -1,0 +1,59 @@
+
+*{
+    text-align: center;
+    padding: 5px;
+}
+
+.numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: xx-large;
+}
+
+td {
+    text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+@keyframes moveAnimation {
+    0% {top: 10px;}
+    50% {top: 20px;}
+    100% {top: 10px;}
+}
+
+#magic, #ans {
+    animation-name: moveAnimation;
+    font-size: 50px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position:relative;
+
+}
+
+body{
+    background-color: #1a1a2e;
+    color: white;
+}
+
+button {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff4d6d;
+}
+
+.answer{
+    font-size: 2rem;
+}

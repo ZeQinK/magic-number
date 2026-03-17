@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet"; href="{{ url_for('static',filename='style.css') }}">
+        <title>Magic Number</title>
+    </head>
+
+    <body>
+        <h1 id="magic">&#129668;</h1>
+        <h1>I can guess what number you are thinking...</h1>
+        <h3>Pick a random number from 1 - 31 and check if your number is in the tables below:</h3>
+        <br>
+        
+        
+
+        <form method="POST">
+            <div class="numbers">
+                <table>
+                    <tr>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>7</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>15</td>
+                        <td>17</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>23</td>
+                        <td>25</td>
+                        <td>27</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                    </tr>
+                </table>
+            </div>
+
+            <input type="radio" id = "yes_1" name="digit1" value="Yes">
+            <label for="yes_1">Yes</label>
+            <input type="radio" id = "no_1" name="digit1" value="No">
+            <label for="no_1">No</label>
+            <br><br>
+
+            <div class="numbers">
+                <table>
+                    <tr>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>18</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                    </tr>
+                </table>
+            </div>
+
+            <input type="radio" id="yes_2" name="digit2" value="Yes">
+            <label for="yes_2">Yes</label>
+            <input type="radio" id="no_2" name="digit2" value="No">
+            <label for="no_2">No</label>
+            <br><br>
+
+            <div class="numbers">
+                <table>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>20</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                    </tr>
+                </table>
+            </div>
+
+            <input type="radio" id="yes_3" name="digit3" value="Yes">
+            <label for="yes_3">Yes</label>
+            <input type="radio"id="no_3" name="digit3" value="No">
+            <label for="no_3">No</label>
+            <br><br>
+
+            <div class="numbers">
+                <table>
+                    <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                    </tr>
+                </table>
+            </div>
+
+            <input type="radio" id="yes_4" name="digit4" value="Yes">
+            <label for="yes_4">Yes</label>
+            <input type="radio" id="no_4" name="digit4" value="No">
+            <label for="no_4">No</label>
+            <br><br>
+
+            <div class="numbers">
+                <table>
+                    <tr>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                    </tr>
+                </table>
+            </div>
+
+            <input type="radio" id="yes_5" name="digit5" value="Yes">
+            <label for="yes_5">Yes</label>
+            <input type="radio" id="no_5" name="digit5" value="No">
+            <label for="no_5">No</label>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <br>
+
+        {% if number %}
+            <h3 class="answer">You are thinking of</h3>
+            <h2 class="answer" id="ans">{{ number }}</h2>
+        {% endif %}
+        
+
+        
+    </body>
+</html>
